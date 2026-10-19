@@ -11,6 +11,7 @@ export default function LpContactForm() {
     cidade: "Niterói",
     tipoImovel: "Residencial (Casa ou Apartamento)",
     objetivo: "",
+    consentimento: true,
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -18,7 +19,8 @@ export default function LpContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+    setFormData({ ...formData, [e.target.name]: value });
     if (errorMessage) setErrorMessage("");
   };
 
@@ -35,25 +37,37 @@ export default function LpContactForm() {
     e.preventDefault();
     if (isLoading) return;
 
+    if (!formData.nome.trim() || !formData.whatsapp.trim()) {
+      setErrorMessage("Por favor, preencha seu nome e WhatsApp.");
+      return;
+    }
+
+    if (!formData.consentimento) {
+      setErrorMessage("É necessário concordar com o tratamento dos dados para contato.");
+      return;
+    }
+
     setIsLoading(true);
     setErrorMessage("");
 
     try {
-      // Salva no Firestore se disponível
+      // 1. Persistência real no Firestore
       try {
         await addDoc(collection(db, "leads"), {
-          nome: formData.nome,
-          whatsapp: formData.whatsapp,
+          nome: formData.nome.trim(),
+          whatsapp: formData.whatsapp.trim(),
           cidade: formData.cidade,
           tipoImovel: formData.tipoImovel,
-          descricao: formData.objetivo,
+          descricao: formData.objetivo.trim() || null,
           origem: "landing_page_legalizacao",
+          consentimentoLGPD: true,
           createdAt: serverTimestamp(),
         });
-      } catch (err) {
-        console.warn("Firestore lead save skipped/cached:", err);
+      } catch (firestoreErr) {
+        console.warn("Firestore save warning:", firestoreErr);
       }
 
+      // 2. Registro de evento analítico
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("event", "generate_lead", {
           position: "form_final",
@@ -63,18 +77,19 @@ export default function LpContactForm() {
 
       setSubmitted(true);
 
+      // 3. Formatação da mensagem e abertura do WhatsApp oficial
       const message = `*Solicitação de Análise Inicial — Roberto Moura*\n\n` +
-        `*Nome:* ${formData.nome}\n` +
-        `*WhatsApp:* ${formData.whatsapp}\n` +
+        `*Nome:* ${formData.nome.trim()}\n` +
+        `*WhatsApp:* ${formData.whatsapp.trim()}\n` +
         `*Município:* ${formData.cidade}\n` +
         `*Tipo de Imóvel:* ${formData.tipoImovel}\n` +
-        `*Situação:* ${formData.objetivo || "Não informada"}`;
+        `*Situação:* ${formData.objetivo.trim() || "Não informada"}`;
 
       const whatsappUrl = `https://wa.me/5521997332031?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
     } catch (err) {
-      console.error("Erro ao enviar formulário:", err);
-      setErrorMessage("Ocorreu um erro ao processar seu pedido. Por favor, tente pelo WhatsApp.");
+      console.error("Erro ao processar envio:", err);
+      setErrorMessage("Ocorreu uma instabilidade momentânea. Você pode falar diretamente pelo botão do WhatsApp abaixo.");
     } finally {
       setIsLoading(false);
     }
@@ -90,7 +105,7 @@ export default function LpContactForm() {
         
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Informações Editoriais e WhatsApp */}
+          {/* Informações Editoriais e Acesso WhatsApp */}
           <div className="lg:col-span-5 space-y-6">
             <span className="text-[11px] font-semibold tracking-widest uppercase text-[#AD9166] block">
               Contato Inicial & Triagem
@@ -99,10 +114,10 @@ export default function LpContactForm() {
               Vamos entender o que seu imóvel precisa?
             </h2>
             <p className="text-[#E8DFD0]/90 text-sm sm:text-base leading-relaxed font-light">
-              Compartilhe as informações iniciais para que possamos compreender sua necessidade e orientar os próximos passos.
+              Compartilhe as informações iniciais para que possamos compreender sua necessidade e orientar os próximos passos com clareza.
             </p>
 
-            {/* Acesso Alternativo ao WhatsApp */}
+            {/* Acesso Alternativo Direto ao WhatsApp */}
             <div className="pt-4">
               <a
                 href={`https://wa.me/5521997332031?text=${whatsappDirectMsg}`}
@@ -120,7 +135,7 @@ export default function LpContactForm() {
 
             <div className="pt-6 border-t border-[#344F43] space-y-1.5 text-xs text-[#E8DFD0]/70 font-light">
               <p>• Atendimento: Niterói, São Gonçalo, Maricá e Grande Rio.</p>
-              <p>• Tratamento de dados estritamente restrito para finalidade de contato técnico.</p>
+              <p>• Tratamento de dados: Os dados são coletados exclusivamente para fins de retorno e avaliação técnica preliminar.</p>
             </div>
           </div>
 
@@ -130,17 +145,17 @@ export default function LpContactForm() {
               Formulário de Análise Prévia
             </h3>
             <p className="text-xs text-[#E8DFD0]/80 mb-6 font-light">
-              Preencha os campos abaixo para iniciar a avaliação do seu imóvel.
+              Preencha os campos abaixo para dar início ao atendimento técnico.
             </p>
 
             {submitted && (
               <div className="mb-6 p-4 rounded-[2px] bg-[#344F43] border border-[#AD9166] text-[#F8F7F3] text-xs leading-relaxed">
-                ✓ Informações organizadas com sucesso! Redirecionando para o canal de atendimento...
+                ✓ Informações registradas com sucesso! Sua mensagem foi formatada e aberta no canal de atendimento do WhatsApp.
               </div>
             )}
 
             {errorMessage && (
-              <div className="mb-6 p-4 rounded-[2px] bg-red-950/60 border border-red-700 text-red-200 text-xs">
+              <div className="mb-6 p-4 rounded-[2px] bg-red-950/70 border border-red-700 text-red-200 text-xs">
                 {errorMessage}
               </div>
             )}
@@ -227,16 +242,31 @@ export default function LpContactForm() {
                 />
               </div>
 
+              <div className="pt-1">
+                <label className="flex items-start gap-2.5 cursor-pointer text-[#E8DFD0]/80 text-[11px] font-light leading-snug">
+                  <input
+                    type="checkbox"
+                    name="consentimento"
+                    checked={formData.consentimento}
+                    onChange={handleChange}
+                    className="mt-0.5 accent-[#AD9166] rounded-[2px]"
+                  />
+                  <span>
+                    Concordo em fornecer meus dados para que a equipe técnica de Roberto Moura entre em contato com orientações sobre o imóvel.
+                  </span>
+                </label>
+              </div>
+
               <button
                 type="submit"
                 disabled={isLoading}
                 className="w-full py-4 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs uppercase tracking-widest rounded-[2px] transition-all disabled:opacity-50 shadow-sm"
               >
-                {isLoading ? "Processando..." : "Solicitar análise inicial →"}
+                {isLoading ? "Processando envio..." : "Solicitar análise inicial →"}
               </button>
 
-              <p className="text-[10px] text-[#E8DFD0]/60 text-center pt-2 leading-relaxed">
-                Ao enviar, você concorda com o tratamento de dados para fins exclusivos de atendimento técnico.
+              <p className="text-[10px] text-[#E8DFD0]/60 text-center pt-2 leading-relaxed font-light">
+                Seus dados não são compartilhados com terceiros e destinam-se exclusivamente ao retorno técnico.
               </p>
             </form>
           </div>

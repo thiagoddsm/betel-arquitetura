@@ -3,9 +3,9 @@ import LpHero from "@/components/LandingPage/LpHero";
 import LpTrustBand from "@/components/LandingPage/LpTrustBand";
 import LpSituations from "@/components/LandingPage/LpSituations";
 import LpMainService from "@/components/LandingPage/LpMainService";
-import LpComplementaryServices from "@/components/LandingPage/LpComplementaryServices";
 import LpProcessTimeline from "@/components/LandingPage/LpProcessTimeline";
 import LpAuthority from "@/components/LandingPage/LpAuthority";
+import LpComplementaryServices from "@/components/LandingPage/LpComplementaryServices";
 import LpCasesAndExperience from "@/components/LandingPage/LpCasesAndExperience";
 import LpFaq from "@/components/LandingPage/LpFaq";
 import LpContactForm from "@/components/LandingPage/LpContactForm";
@@ -76,40 +76,42 @@ export default function LegalizacaoLandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* SEÇÃO 1: Cabeçalho Minimalista e Elegante */}
+      {/* 1. Cabeçalho Minimalista e Elegante */}
       <LpHeader />
 
       <main className="flex-1">
-        {/* SEÇÃO 2: Hero Principal */}
+        {/* 2. Hero Principal */}
         <LpHero />
 
-        {/* SEÇÃO 3: Faixa de Credibilidade */}
+        {/* 3. Faixa de Credibilidade */}
         <LpTrustBand />
 
-        {/* SEÇÃO 4: Identificação da Necessidade (Situações) */}
+        {/* 4. Situações que Roberto Atende */}
         <LpSituations />
 
-        {/* SEÇÃO 5: Como Funciona */}
+        {/* 5. Escopo Técnico: O que é analisado no seu imóvel */}
+        <LpMainService />
+
+        {/* 6. Como Funciona o Atendimento (Jornada do Cliente) */}
         <LpProcessTimeline />
 
-        {/* SEÇÃO 6: Apresentação de Roberto Moura */}
+        {/* 7. Apresentação Editorial de Roberto Moura */}
         <LpAuthority />
 
-        {/* Serviços e Tipos de Análise Técnica */}
-        <LpMainService />
+        {/* 8. Serviços Complementares */}
         <LpComplementaryServices />
 
-        {/* SEÇÃO 7: Conhecimento Técnico Aplicado (Tipos de Análise) */}
+        {/* 9. Tipos de Análise Técnica */}
         <LpCasesAndExperience />
 
-        {/* SEÇÃO 9: Perguntas Frequentes (FAQ) */}
+        {/* 10. Perguntas Frequentes (FAQ Revisada) */}
         <LpFaq />
 
-        {/* SEÇÃO 10: CTA Final e Formulário com Persistência Firestore */}
+        {/* 11. CTA Final e Formulário com Persistência Firestore */}
         <LpContactForm />
       </main>
 
-      {/* SEÇÃO 11: Rodapé Sóbrio */}
+      {/* 12. Rodapé Sóbrio */}
       <LpFooter />
 
       {/* Botão Flutuante de WhatsApp */}

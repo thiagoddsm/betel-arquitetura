@@ -8,43 +8,43 @@ export default function LpFaq() {
   const faqs = [
     {
       q: "O que significa regularizar um imóvel?",
-      a: "Regularizar significa adequar a situação física da edificação perante a Prefeitura e o Cartório de Registro de Imóveis (RGI). Envolve obter o Habite-se ou certidão equivalente e averbar a área construída real na matrícula do imóvel, garantindo plena segurança jurídica e valor de mercado.",
+      a: "Regularizar significa buscar a conformidade entre a situação física real da edificação, os registros municipais (Prefeitura) e a matrícula do Cartório de Registro de Imóveis (RGI). Esse processo pode envolver a obtenção de certidões, habite-se e averbação das áreas construídas, contribuindo para a segurança documental e a preservação do valor venal do patrimônio.",
     },
     {
-      q: "Quando uma obra ou ampliação precisa ser regularizada?",
-      a: "Sempre que houver alteração de área construída (novos cômodos, segundo pavimento, cobertura, varanda, garagem ou piscina) ou modificações estruturais que não constem na planta aprovada pelo município.",
+      q: "Quando uma obra ou ampliação precisa ser avaliada para regularização?",
+      a: "Em regra, quando ocorrem alterações na área construída (como acréscimo de cômodos, novos pavimentos, coberturas ou reformas estruturais) que não constem no projeto previamente aprovado pela Prefeitura. A necessidade exata de regularização e o caminho aplicável dependem da legislação urbanística de cada município e das características da edificação.",
     },
     {
-      q: "Quais documentos podem ser necessários para a análise?",
-      a: "Para a conversa inicial, envie o que já tiver em mãos: certidão de ônus reais do RGI ou escritura, carnê recente de IPTU, plantas antigas ou projetos (se houver) e fotos atuais do imóvel. Não possuir todos os documentos não impede o primeiro atendimento.",
+      q: "Quais documentos podem ser úteis para a conversa inicial?",
+      a: "Para a triagem preliminar, você pode compartilhar os documentos que já possuir: certidão de ônus reais do RGI ou escritura, carnê recente de IPTU, plantas ou projetos anteriores (se houver) e fotos do local. Não ter toda a documentação reunida não impede o primeiro contato.",
     },
     {
-      q: "É possível começar se o imóvel não tem projeto aprovado?",
-      a: "Sim. A ausência de projeto original é muito comum. Nesses casos, realizamos o levantamento arquitetônico cadastral in loco (as-built) e produzimos as peças técnicas exigidas pela Prefeitura para dar entrada no processo.",
+      q: "É possível iniciar se o imóvel não tiver projeto aprovado?",
+      a: "Sim. A ausência de projeto original é frequente. Nesses casos, o trabalho técnico inclui o levantamento arquitetônico cadastral no local (as-built) e a produção das peças técnicas necessárias para instruir o processo perante os órgãos responsáveis.",
     },
     {
       q: "Quanto custa o serviço?",
-      a: "Os honorários técnicos dependem da área construída, do tipo de imóvel (residencial, comercial ou terreno), da complexidade da situação documental e do município. A proposta de serviços é elaborada com escopo fechado após a triagem inicial.",
+      a: "Os honorários técnicos variam conforme a complexidade da situação documental, a área construída, a tipologia do imóvel e o município. Uma proposta com escopo detalhado é apresentada após a compreensão das necessidades do caso.",
     },
     {
-      q: "Quanto tempo leva o processo?",
-      a: "O prazo varia conforme a necessidade de adequações técnicas e o tempo de tramitação dos órgãos públicos envolvidos (Prefeitura, Fazenda e Cartório de Registro de Imóveis). A nossa proposta separa claramente o prazo de elaboração técnica dos prazos externos dos órgãos competentes.",
+      q: "Quanto tempo costuma levar o processo?",
+      a: "O tempo total é composto por duas fases distintas: a elaboração dos levantamentos e projetos técnicos (conduzida pelo escritório) e a tramitação nos órgãos externos (Prefeitura e Cartório). A proposta técnica distingue expressamente os prazos do trabalho profissional das estimativas de análise dos órgãos públicos.",
     },
     {
-      q: "A regularização é garantida?",
-      a: "Não. Nenhum profissional sério pode garantir aprovação prévia, pois a viabilidade e a decisão final dependem das condições da edificação, do enquadramento nas leis urbanísticas e do deferimento pelos órgãos competentes. O trabalho técnico de Roberto Moura organiza, fundamenta e conduz o processo com o máximo rigor para alcançar a aprovação dentro das normas aplicáveis.",
+      q: "A aprovação do processo é garantida?",
+      a: "Não. A viabilidade e o deferimento dependem do atendimento às normas urbanísticas vigentes, das condições do imóvel e da análise soberana dos órgãos competentes. A atuação técnica de Roberto Moura organiza, instrui e acompanha o processo com rigor técnico para buscar a conformidade documental dentro dos parâmetros legais.",
     },
     {
       q: "Roberto atende imóveis comerciais e pequenos negócios?",
-      a: "Sim. Atendemos proprietários de lojas, clínicas, galpões, escritórios e pequenos comércios que precisam de orientação para abertura, transferência ou regularização de suas atividades perante o município.",
+      a: "Sim. A orientação técnica contempla proprietários de lojas, clínicas, escritórios e outros negócios que necessitam avaliar o imóvel para abertura, transferência ou adequação de atividades junto ao município.",
     },
     {
-      q: "Quais cidades são atendidas?",
-      a: "O atendimento prioritário abrange Niterói, São Gonçalo, Maricá e região metropolitana do Rio de Janeiro. A viabilidade para outras localidades pode ser avaliada no primeiro contato.",
+      q: "Quais cidades são atendidas prioritariamente?",
+      a: "A atuação principal concentra-se em Niterói, São Gonçalo, Maricá e região metropolitana. A viabilidade de atendimento para outros municípios pode ser consultada no contato inicial.",
     },
     {
-      q: "Preciso ir ao escritório para iniciar?",
-      a: "Não necessariamente. O primeiro contato e a triagem documental inicial acontecem de forma ágil e prática pelo WhatsApp. Havendo necessidade de vistoria in loco ou reunião presencial, agendamos com você.",
+      q: "É necessário comparecer ao escritório para iniciar?",
+      a: "O primeiro contato e a triagem documental acontecem com praticidade via WhatsApp. Caso o caso exija vistoria técnica no imóvel ou reunião presencial, as etapas são alinhadas diretamente com o cliente.",
     },
   ];
 
@@ -63,8 +63,8 @@ export default function LpFaq() {
           <h2 className="font-serif text-3xl sm:text-4xl text-[#203B32] font-normal leading-tight">
             Esclareça suas dúvidas sobre a regularização
           </h2>
-          <p className="text-[#292D2A]/80 mt-3 text-base leading-relaxed">
-            Orientações objetivas sobre prazos, documentação, custos e viabilidade técnica.
+          <p className="text-[#292D2A]/80 mt-3 text-base leading-relaxed font-light">
+            Orientações objetivas e responsáveis sobre procedimentos, documentos, prazos e viabilidade técnica.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function LpFaq() {
                 </button>
 
                 <div
-                  className={`px-6 text-xs sm:text-sm text-[#73766F] leading-relaxed transition-all duration-200 ${
+                  className={`px-6 text-xs sm:text-sm text-[#73766F] leading-relaxed transition-all duration-200 font-light ${
                     isOpen ? "pb-6 pt-1 block border-t border-[#E8DFD0]/60" : "hidden"
                   }`}
                 >
