@@ -1,0 +1,20 @@
+.section-title-wrapper {
+   .divider {
+      position: relative;
+      top: 22px;
+   }
+}
+@media (min-width: 992px) {
+   .section-title-wrapper {
+      .divider {
+         top: 35px;
+      }
+   }
+}
+
+.section-title-wrapper {
+   p {
+      font-size: var(--text-2xl);
+      line-height: 1.2;
+   }
+}

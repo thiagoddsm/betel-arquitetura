@@ -1,0 +1,17 @@
+#contato .divider {
+   position: relative;
+   top: 22px;
+}
+
+@media (min-width: 992px) {
+    #contato .divider {
+       top: 0;
+    }
+}
+
+.section-title-wrapper {
+   p {
+      font-size: var(--text-2xl);
+      line-height: 1.2;
+   }
+}  

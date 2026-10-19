@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Regra padrão: permite leitura/escrita para usuários autenticados
+    // e permite envio público de leads na coleção "leads"
+    match /leads/{leadId} {
+      allow create: if true; // Permite que visitantes do site enviem formulários
+      allow read, update, delete: if request.auth != null; // Apenas usuários logados podem ler/gerenciar
+    }
+
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
