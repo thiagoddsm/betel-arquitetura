@@ -6,54 +6,51 @@ export default function LpFooter() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0D1317] text-gray-400 py-12 border-t border-[#1F2A31]">
+    <footer className="bg-[#1A312A] text-[#E8DFD0]/80 py-14 border-t border-[#344F43]">
       <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#1F2A31]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-[#344F43]">
           
-          <div className="flex flex-col items-center md:items-start gap-1 text-center md:text-left">
-            <span className="text-white font-bold text-base tracking-tight font-serif">
-              Roberto Moura | Arquiteto e Urbanista
+          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-1">
+            <span className="font-serif tracking-widest text-[#F8F7F3] font-normal text-xl uppercase">
+              BETEL ARQUITETURA
             </span>
-            <p className="text-xs text-[#8FD5E8]">
-              CAU/BR A14965-9 • Sócio-fundador da Betel Arquitetura
+            <p className="text-xs text-[#AD9166] font-medium">
+              Roberto Moura • Arquiteto e Urbanista • CAU/BR A14965-9
             </p>
-            <p className="text-xs text-gray-500 mt-1">
-              Atendimento em Niterói, São Gonçalo, Maricá e região.
+            <p className="text-xs text-[#E8DFD0]/60 font-light">
+              Orientação técnica e regularização em Niterói, São Gonçalo, Maricá e região.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-5 text-xs text-gray-300">
-            <a href="#servicos" className="hover:text-white transition-colors">
+          <nav className="flex flex-wrap justify-center gap-6 text-xs uppercase tracking-widest text-[#E8DFD0]">
+            <a href="#servicos" className="hover:text-[#AD9166] transition-colors">
               Serviços
             </a>
-            <a href="#como-funciona" className="hover:text-white transition-colors">
+            <a href="#como-funciona" className="hover:text-[#AD9166] transition-colors">
               Como Funciona
             </a>
-            <a href="#sobre" className="hover:text-white transition-colors">
-              Sobre Roberto
+            <a href="#roberto-moura" className="hover:text-[#AD9166] transition-colors">
+              Roberto Moura
             </a>
-            <a href="#experiencias" className="hover:text-white transition-colors">
-              Experiência
-            </a>
-            <a href="#faq" className="hover:text-white transition-colors">
+            <a href="#faq" className="hover:text-[#AD9166] transition-colors">
               Dúvidas
             </a>
-            <a href="#contato" className="hover:text-white transition-colors">
+            <a href="#contato" className="hover:text-[#AD9166] transition-colors">
               Contato
             </a>
-          </div>
+          </nav>
 
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-3">
-          <p>© {currentYear} Roberto Moura. Estrutura institucional: Betel Arquitetura.</p>
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#E8DFD0]/60 gap-4">
+          <p>© {currentYear} Betel Arquitetura. Roberto Moura. Todos os direitos reservados.</p>
           <div className="flex items-center gap-4">
-            <Link href="/" className="hover:text-gray-300 transition-colors">
-              Site Betel Arquitetura
+            <Link href="/" className="hover:text-white transition-colors">
+              Site Institucional Betel
             </Link>
             <span>•</span>
-            <a href="#contato" className="hover:text-gray-300 transition-colors">
-              Privacidade & Termos
+            <a href="#contato" className="hover:text-white transition-colors">
+              Política de Privacidade
             </a>
           </div>
         </div>

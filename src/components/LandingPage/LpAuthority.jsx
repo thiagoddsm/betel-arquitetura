@@ -3,7 +3,7 @@
 export default function LpAuthority() {
   const whatsappNumber = "5521997332031";
   const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de falar com você e sua equipe sobre a regularização do meu imóvel."
+    "Olá, Roberto. Gostaria de falar diretamente sobre a situação e regularização do meu imóvel."
   );
 
   const handleCtaClick = () => {
@@ -16,62 +16,75 @@ export default function LpAuthority() {
   };
 
   return (
-    <section id="sobre" className="py-16 md:py-20 bg-[#18232A] text-white border-b border-[#2B3B44]">
+    <section id="roberto-moura" className="py-20 md:py-28 bg-[#203B32] text-[#F8F7F3] border-b border-[#344F43]">
       <div className="container mx-auto px-4 md:px-8">
         
-        <div className="grid lg:grid-cols-12 gap-10 items-center max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           
-          {/* Card do Arquiteto / Imagem de Apoio */}
+          {/* Card Editorial do Arquiteto */}
           <div className="lg:col-span-5">
-            <div className="bg-[#121A1F] border border-[#2B3B44] rounded-2xl p-6 text-center shadow-xl">
-              <div className="w-24 h-24 rounded-full bg-[#1F3742] border-2 border-[#8FD5E8] flex items-center justify-center text-[#8FD5E8] font-bold text-3xl font-serif mx-auto mb-4">
+            <div className="relative bg-[#1A312A] border border-[#344F43] rounded-[3px] p-8 md:p-10 text-center shadow-xl">
+              <div className="w-24 h-24 rounded-full bg-[#203B32] border-2 border-[#AD9166] flex items-center justify-center text-[#AD9166] font-serif font-normal text-3xl mx-auto mb-6">
                 RM
               </div>
-              <h3 className="text-xl font-bold text-white font-serif">
+              <h3 className="font-serif text-2xl font-normal text-white">
                 Roberto Moura
               </h3>
-              <p className="text-xs text-[#8FD5E8] font-medium mt-0.5">
-                Arquiteto e Urbanista • CAU/BR A14965-9
+              <p className="text-xs uppercase tracking-widest text-[#AD9166] font-semibold mt-1.5">
+                Arquiteto e Urbanista
               </p>
-              <p className="text-xs text-gray-400 mt-1">
-                Sócio-fundador da Betel Arquitetura
-              </p>
-              <div className="mt-4 pt-4 border-t border-[#22313A] text-xs text-gray-400">
-                Atuação em Niterói, São Gonçalo, Maricá e região
+              <div className="inline-block mt-3 px-3 py-1 bg-[#203B32] border border-[#AD9166]/30 text-[11px] text-[#E8DFD0] rounded-[2px]">
+                CAU/BR A14965-9
+              </div>
+              
+              <div className="mt-8 pt-6 border-t border-[#344F43] text-xs text-[#E8DFD0]/80 space-y-2 text-left">
+                <p className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
+                  <span>Sócio-fundador da Betel Arquitetura</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
+                  <span>Mais de 40 anos de atuação profissional</span>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
+                  <span>Atendimento em Niterói, SG, Maricá e região</span>
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Texto em 1ª Pessoa Definido no Briefing */}
-          <div className="lg:col-span-7 space-y-5">
-            <span className="text-[#8FD5E8] font-bold text-xs uppercase tracking-widest bg-[#1F3742] px-3 py-1 rounded">
-              Sobre o Arquiteto
+          {/* Texto Biográfico em Coluna Editorial */}
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-[11px] font-semibold tracking-widest uppercase text-[#AD9166] block">
+              Liderança Técnica & Proximidade
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-serif">
-              Experiência para orientar decisões sobre o seu imóvel
+            <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal leading-tight">
+              Experiência técnica. <br />
+              <span className="italic text-[#E8DFD0]">Atendimento próximo.</span>
             </h2>
 
-            <div className="space-y-4 text-sm text-[#D3DCE0] leading-relaxed">
+            <div className="space-y-4 text-sm sm:text-base text-[#E8DFD0]/90 leading-relaxed font-light">
               <p>
-                Sou <strong className="text-white">Roberto Moura</strong>, arquiteto e urbanista, com <strong className="text-white">mais de 40 anos de atuação</strong> em projetos, consultoria técnica e demandas de legalização de imóveis.
+                Roberto Moura é arquiteto e urbanista e atua na orientação técnica de processos de regularização imobiliária. Seu trabalho busca esclarecer as particularidades de cada imóvel e orientar o cliente sobre os procedimentos necessários para encaminhar seu caso.
               </p>
               <p>
-                Ao longo dessa trajetória, trabalhei com necessidades residenciais, comerciais e corporativas. Hoje, meu atendimento está especialmente voltado a <strong className="text-white">proprietários, famílias e pequenos negócios</strong> que precisam entender a situação de um imóvel e organizar os próximos passos com responsabilidade.
+                Com <strong className="font-semibold text-white">mais de 40 anos de atuação profissional</strong> em projetos, consultoria técnica e demandas de legalização, seu foco está voltado ao atendimento direto a proprietários, famílias e pequenos negócios que necessitam de segurança jurídica e responsabilidade técnica.
               </p>
               <p>
-                Sou sócio-fundador da <strong className="text-white">Betel Arquitetura</strong>, estrutura profissional que apoia e viabiliza cada etapa dessa experiência.
+                Como sócio-fundador da <strong className="font-semibold text-white">Betel Arquitetura</strong>, Roberto alia seu conhecimento prático das exigências municipais e cartoriais a uma estrutura institucional sólida de projetos e consultoria.
               </p>
             </div>
 
-            <div className="pt-3">
+            <div className="pt-4 flex items-center gap-4">
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCtaClick}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#8FD5E8] hover:bg-[#a9e4f3] text-[#0A1A22] font-bold text-xs uppercase tracking-wider rounded transition-colors"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs uppercase tracking-widest rounded-[2px] transition-all shadow-sm"
               >
-                <span>Falar com a equipe</span>
+                <span>Falar com o arquiteto</span>
                 <span>&rarr;</span>
               </a>
             </div>

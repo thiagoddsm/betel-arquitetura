@@ -1,26 +1,25 @@
 import LpHeader from "@/components/LandingPage/LpHeader";
 import LpHero from "@/components/LandingPage/LpHero";
-import LpSituations from "@/components/LandingPage/LpSituations";
 import LpTrustBand from "@/components/LandingPage/LpTrustBand";
+import LpSituations from "@/components/LandingPage/LpSituations";
 import LpMainService from "@/components/LandingPage/LpMainService";
 import LpComplementaryServices from "@/components/LandingPage/LpComplementaryServices";
 import LpProcessTimeline from "@/components/LandingPage/LpProcessTimeline";
 import LpAuthority from "@/components/LandingPage/LpAuthority";
 import LpCasesAndExperience from "@/components/LandingPage/LpCasesAndExperience";
-import LpTestimonials from "@/components/LandingPage/LpTestimonials";
 import LpFaq from "@/components/LandingPage/LpFaq";
 import LpContactForm from "@/components/LandingPage/LpContactForm";
 import LpFooter from "@/components/LandingPage/LpFooter";
 import FloatingWhatsApp from "@/components/LandingPage/FloatingWhatsApp";
 
 export const metadata = {
-  title: "Legalização de Imóveis em Niterói, São Gonçalo e Maricá | Roberto Moura",
+  title: "Legalização de Imóveis em Niterói, São Gonçalo e Maricá | Roberto Moura — Betel Arquitetura",
   description:
-    "Precisa legalizar ou regularizar um imóvel? Fale com Roberto Moura, arquiteto com mais de 40 anos de experiência em Niterói, São Gonçalo e Maricá.",
+    "Orientação técnica para regularização e legalização de imóveis com Roberto Moura, arquiteto e urbanista com mais de 40 anos de experiência. Betel Arquitetura.",
   openGraph: {
     title: "Legalização de Imóveis em Niterói, São Gonçalo e Maricá | Roberto Moura",
     description:
-      "Roberto Moura reúne mais de 40 anos de experiência para analisar a situação do seu imóvel, orientar o caminho técnico e conduzir as etapas do serviço com clareza.",
+      "Seu imóvel em ordem. O próximo passo, com segurança. Orientação técnica para regularização com Roberto Moura, arquiteto e urbanista.",
     type: "website",
     url: "https://www.betelarquitetura.com.br/legalizacao",
   },
@@ -70,52 +69,47 @@ export default function LegalizacaoLandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#121A1F] text-[#1E242B] flex flex-col font-sans selection:bg-[#0F3B46] selection:text-white">
+    <div className="min-h-screen bg-[#F8F7F3] text-[#292D2A] flex flex-col font-sans selection:bg-[#203B32] selection:text-[#F8F7F3]">
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* 1. Cabeçalho Enxuto */}
+      {/* SEÇÃO 1: Cabeçalho Minimalista e Elegante */}
       <LpHeader />
 
       <main className="flex-1">
-        {/* 2. Hero */}
+        {/* SEÇÃO 2: Hero Principal */}
         <LpHero />
 
-        {/* 3. Situações Atendidas */}
-        <LpSituations />
-
-        {/* 4. Faixa de Confiança */}
+        {/* SEÇÃO 3: Faixa de Credibilidade */}
         <LpTrustBand />
 
-        {/* 5. Serviço Principal */}
-        <LpMainService />
+        {/* SEÇÃO 4: Identificação da Necessidade (Situações) */}
+        <LpSituations />
 
-        {/* 6. Serviços Complementares */}
-        <LpComplementaryServices />
-
-        {/* 7. Como Funciona o Atendimento (5 etapas) */}
+        {/* SEÇÃO 5: Como Funciona */}
         <LpProcessTimeline />
 
-        {/* 8. Sobre Roberto Moura */}
+        {/* SEÇÃO 6: Apresentação de Roberto Moura */}
         <LpAuthority />
 
-        {/* 9 & 10. Casos e Experiências Corporativas */}
+        {/* Serviços e Tipos de Análise Técnica */}
+        <LpMainService />
+        <LpComplementaryServices />
+
+        {/* SEÇÃO 7: Conhecimento Técnico Aplicado (Tipos de Análise) */}
         <LpCasesAndExperience />
 
-        {/* 11. Depoimentos */}
-        <LpTestimonials />
-
-        {/* 12. FAQ e Objeções */}
+        {/* SEÇÃO 9: Perguntas Frequentes (FAQ) */}
         <LpFaq />
 
-        {/* 13. CTA Final & Triagem */}
+        {/* SEÇÃO 10: CTA Final e Formulário com Persistência Firestore */}
         <LpContactForm />
       </main>
 
-      {/* 14. Rodapé Profissional */}
+      {/* SEÇÃO 11: Rodapé Sóbrio */}
       <LpFooter />
 
       {/* Botão Flutuante de WhatsApp */}

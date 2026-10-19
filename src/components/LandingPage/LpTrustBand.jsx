@@ -3,46 +3,46 @@
 export default function LpTrustBand() {
   const indicators = [
     {
-      highlight: "+40 Anos",
-      label: "De experiência em arquitetura e regularização",
+      num: "40+",
+      label: "Anos de experiência comprovada em arquitetura e regularização",
     },
     {
-      highlight: "Atuação Regional",
-      label: "Niterói, São Gonçalo, Maricá e região",
+      num: "CAU",
+      label: "Registro profissional ativo CAU/BR A14965-9",
     },
     {
-      highlight: "CAU/BR A14965-9",
-      label: "Registro de Responsabilidade Técnica",
+      num: "RJ",
+      label: "Atendimento em Niterói, São Gonçalo, Maricá e região",
     },
     {
-      highlight: "Betel Arquitetura",
-      label: "Estrutura institucional e técnica de apoio",
+      num: "Betel",
+      label: "Estrutura institucional e escritório multidisciplinar",
     },
   ];
 
   return (
-    <section className="bg-[#18232A] text-white py-10 border-b border-[#2B3B44]">
+    <section className="bg-[#203B32] text-[#F8F7F3] py-8 md:py-10 border-b border-[#344F43]">
       <div className="container mx-auto px-4 md:px-8">
         
-        <div className="text-center mb-6">
-          <p className="text-xs uppercase tracking-widest text-[#8FD5E8] font-bold">
-            Experiência técnica com atuação local
-          </p>
-        </div>
-
-        {/* Grade 2 por 2 no mobile, 4 colunas no desktop */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        {/* Grade horizontal discreta com separadores sutis */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-center">
           {indicators.map((item, idx) => (
             <div
               key={idx}
-              className="p-4 rounded-lg bg-[#121A1F]/60 border border-[#2B3B44]/60 flex flex-col items-center justify-center"
+              className={`flex items-start gap-4 ${
+                idx !== 0 ? "lg:border-l lg:border-[#344F43] lg:pl-8" : ""
+              }`}
             >
-              <span className="text-lg sm:text-xl md:text-2xl font-black text-white mb-1 font-serif">
-                {item.highlight}
-              </span>
-              <span className="text-xs text-[#A2B4BC] leading-snug">
-                {item.label}
-              </span>
+              <div className="w-10 h-10 rounded-[2px] bg-[#344F43]/60 border border-[#AD9166]/30 flex items-center justify-center shrink-0">
+                <span className="font-serif text-[#AD9166] font-semibold text-sm">
+                  {item.num}
+                </span>
+              </div>
+              <div>
+                <p className="text-xs font-normal text-[#E8DFD0] leading-snug">
+                  {item.label}
+                </p>
+              </div>
             </div>
           ))}
         </div>

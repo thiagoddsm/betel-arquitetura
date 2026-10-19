@@ -7,44 +7,44 @@ export default function LpFaq() {
 
   const faqs = [
     {
-      q: "Como saber se meu imóvel precisa de legalização ou regularização?",
-      a: "Alguns sinais são ampliação ou reforma sem atualização, ausência de projeto ou aprovação, diferença entre a área construída e a documentação e dificuldades antes de vender, financiar ou inventariar. A confirmação depende da análise do imóvel e dos documentos.",
+      q: "O que significa regularizar um imóvel?",
+      a: "Regularizar significa adequar a situação física da edificação perante a Prefeitura e o Cartório de Registro de Imóveis (RGI). Envolve obter o Habite-se ou certidão equivalente e averbar a área construída real na matrícula do imóvel, garantindo plena segurança jurídica e valor de mercado.",
     },
     {
-      q: "Quais documentos preciso ter para o primeiro contato?",
-      a: "Envie o que já tiver, como matrícula ou escritura, IPTU ou inscrição imobiliária, plantas e aprovações anteriores, fotos atuais e um breve histórico. Não ter todos os documentos não impede a conversa inicial.",
+      q: "Quando uma obra ou ampliação precisa ser regularizada?",
+      a: "Sempre que houver alteração de área construída (novos cômodos, segundo pavimento, cobertura, varanda, garagem ou piscina) ou modificações estruturais que não constem na planta aprovada pelo município.",
+    },
+    {
+      q: "Quais documentos podem ser necessários para a análise?",
+      a: "Para a conversa inicial, envie o que já tiver em mãos: certidão de ônus reais do RGI ou escritura, carnê recente de IPTU, plantas antigas ou projetos (se houver) e fotos atuais do imóvel. Não possuir todos os documentos não impede o primeiro atendimento.",
     },
     {
       q: "É possível começar se o imóvel não tem projeto aprovado?",
-      a: "A ausência de projeto é uma das situações que podem exigir levantamento e produção de peças técnicas. Roberto precisa avaliar o imóvel, a documentação disponível e as regras aplicáveis antes de indicar o caminho.",
+      a: "Sim. A ausência de projeto original é muito comum. Nesses casos, realizamos o levantamento arquitetônico cadastral in loco (as-built) e produzimos as peças técnicas exigidas pela Prefeitura para dar entrada no processo.",
     },
     {
       q: "Quanto custa o serviço?",
-      a: "O valor depende da área, do tipo de imóvel, da situação documental, do município e do escopo técnico. O orçamento é preparado após a compreensão inicial do caso.",
+      a: "Os honorários técnicos dependem da área construída, do tipo de imóvel (residencial, comercial ou terreno), da complexidade da situação documental e do município. A proposta de serviços é elaborada com escopo fechado após a triagem inicial.",
     },
     {
-      q: "Quanto tempo leva?",
-      a: "O prazo varia conforme a complexidade, os documentos, a necessidade de ajustes e o andamento dos órgãos envolvidos. A proposta deve separar o prazo do trabalho técnico dos prazos externos.",
+      q: "Quanto tempo leva o processo?",
+      a: "O prazo varia conforme a necessidade de adequações técnicas e o tempo de tramitação dos órgãos públicos envolvidos (Prefeitura, Fazenda e Cartório de Registro de Imóveis). A nossa proposta separa claramente o prazo de elaboração técnica dos prazos externos dos órgãos competentes.",
     },
     {
-      q: "A aprovação é garantida?",
-      a: "Não. A viabilidade e a aprovação dependem das condições do imóvel, da legislação e da análise dos órgãos competentes. O trabalho técnico organiza e conduz o processo dentro do escopo contratado.",
+      q: "A regularização é garantida?",
+      a: "Não. Nenhum profissional sério pode garantir aprovação prévia, pois a viabilidade e a decisão final dependem das condições da edificação, do enquadramento nas leis urbanísticas e do deferimento pelos órgãos competentes. O trabalho técnico de Roberto Moura organiza, fundamenta e conduz o processo com o máximo rigor para alcançar a aprovação dentro das normas aplicáveis.",
     },
     {
       q: "Roberto atende imóveis comerciais e pequenos negócios?",
-      a: "Sim. A comunicação do site contempla proprietários de lojas, clínicas, escritórios e outros negócios que precisam avaliar o imóvel para abrir, transferir ou regularizar uma atividade. O escopo é definido caso a caso.",
+      a: "Sim. Atendemos proprietários de lojas, clínicas, galpões, escritórios e pequenos comércios que precisam de orientação para abertura, transferência ou regularização de suas atividades perante o município.",
     },
     {
       q: "Quais cidades são atendidas?",
-      a: "O atendimento principal abrange Niterói, São Gonçalo, Maricá e região. A possibilidade de atender outros municípios deve ser confirmada no primeiro contato.",
+      a: "O atendimento prioritário abrange Niterói, São Gonçalo, Maricá e região metropolitana do Rio de Janeiro. A viabilidade para outras localidades pode ser avaliada no primeiro contato.",
     },
     {
-      q: "Preciso ir ao escritório?",
-      a: "O primeiro contato pode acontecer pelo WhatsApp. Depois da triagem, a equipe informa se o caso exige reunião, vistoria ou outra etapa presencial.",
-    },
-    {
-      q: "Roberto também desenvolve projetos arquitetônicos?",
-      a: "Sim. Projetos arquitetônicos aparecem como serviço complementar, com apoio institucional da Betel Arquitetura. A necessidade de projeto pode surgir de forma independente ou dentro de uma demanda relacionada ao imóvel.",
+      q: "Preciso ir ao escritório para iniciar?",
+      a: "Não necessariamente. O primeiro contato e a triagem documental inicial acontecem de forma ágil e prática pelo WhatsApp. Havendo necessidade de vistoria in loco ou reunião presencial, agendamos com você.",
     },
   ];
 
@@ -53,49 +53,48 @@ export default function LpFaq() {
   };
 
   return (
-    <section id="faq" className="py-16 md:py-20 bg-white text-[#1E242B] border-b border-gray-200">
+    <section id="faq" className="py-20 md:py-28 bg-[#F8F7F3] text-[#292D2A] border-b border-[#E8DFD0]">
       <div className="container mx-auto px-4 md:px-8 max-w-4xl">
         
-        <div className="text-center mb-12">
-          <span className="text-[#0F3B46] font-bold text-xs uppercase tracking-widest bg-[#E3EDF0] px-3 py-1 rounded">
+        <div className="max-w-2xl mb-16 text-left">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-[#AD9166] block mb-2">
             Perguntas Frequentes
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-3 text-[#121A1F] font-serif">
-            Dúvidas comuns sobre legalização e atendimento
+          <h2 className="font-serif text-3xl sm:text-4xl text-[#203B32] font-normal leading-tight">
+            Esclareça suas dúvidas sobre a regularização
           </h2>
-          <p className="text-gray-600 mt-3 text-sm sm:text-base">
-            Respostas claras para as principais questões antes de iniciar o contato.
+          <p className="text-[#292D2A]/80 mt-3 text-base leading-relaxed">
+            Orientações objetivas sobre prazos, documentação, custos e viabilidade técnica.
           </p>
         </div>
 
-        {/* Acordeão */}
+        {/* Acordeão Editorial */}
         <div className="space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
               <div
                 key={idx}
-                className="bg-[#F8F9FA] border border-gray-200 rounded-xl overflow-hidden transition-colors"
+                className="bg-white border border-[#E8DFD0] rounded-[3px] overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full text-left px-5 sm:px-6 py-4 flex items-center justify-between gap-4 font-bold text-gray-900 hover:text-[#0F3B46] transition-colors text-sm sm:text-base"
+                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 font-serif text-base sm:text-lg text-[#203B32] hover:text-[#AD9166] transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span>{faq.q}</span>
+                  <span className="leading-snug">{faq.q}</span>
                   <span
-                    className={`w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center shrink-0 text-gray-700 text-xs transition-transform duration-200 ${
-                      isOpen ? "rotate-180 bg-[#E3EDF0] text-[#0F3B46]" : ""
+                    className={`w-6 h-6 rounded-full border border-[#E8DFD0] flex items-center justify-center shrink-0 text-xs transition-transform duration-300 ${
+                      isOpen ? "rotate-180 bg-[#203B32] text-white border-[#203B32]" : "text-[#73766F] bg-[#F8F7F3]"
                     }`}
                   >
                     ▼
                   </span>
                 </button>
 
-                {/* Resposta sempre acessível e indexável */}
                 <div
-                  className={`px-5 sm:px-6 text-xs sm:text-sm text-gray-600 leading-relaxed transition-all duration-200 ${
-                    isOpen ? "pb-5 pt-1 block border-t border-gray-200/60" : "hidden"
+                  className={`px-6 text-xs sm:text-sm text-[#73766F] leading-relaxed transition-all duration-200 ${
+                    isOpen ? "pb-6 pt-1 block border-t border-[#E8DFD0]/60" : "hidden"
                   }`}
                 >
                   <p>{faq.a}</p>
@@ -103,24 +102,6 @@ export default function LpFaq() {
               </div>
             );
           })}
-        </div>
-
-        {/* Suporte Extra */}
-        <div className="mt-10 text-center p-6 bg-[#F8F9FA] rounded-xl border border-gray-200">
-          <p className="text-sm font-semibold text-gray-800">
-            Tem outra dúvida sobre a situação do seu imóvel?
-          </p>
-          <p className="text-xs text-gray-500 mt-1 mb-4">
-            Envie sua pergunta diretamente pelo WhatsApp.
-          </p>
-          <a
-            href="https://wa.me/5521997332031?text=Ol%C3%A1%2C%20Roberto.%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20regulariza%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#0F3B46] hover:bg-[#164E5D] text-white font-bold text-xs uppercase tracking-wider rounded transition-colors"
-          >
-            Fazer Pergunta no WhatsApp
-          </a>
         </div>
 
       </div>

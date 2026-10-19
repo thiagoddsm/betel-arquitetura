@@ -3,7 +3,7 @@
 export default function FloatingWhatsApp() {
   const whatsappNumber = "5521997332031";
   const defaultMsg = encodeURIComponent(
-    "Olá. Vim pelo site do Roberto Moura e gostaria de explicar a situação do meu imóvel. Ele fica em [cidade/bairro] e preciso de ajuda com [breve descrição]."
+    "Olá, Roberto. Gostaria de orientação técnica para a regularização do meu imóvel."
   );
 
   const handleFloatingClick = () => {
@@ -16,24 +16,24 @@ export default function FloatingWhatsApp() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center group">
-      {/* Tooltip / Badge */}
-      <div className="hidden md:flex items-center mr-3 px-3.5 py-1.5 bg-[#121A1F] text-white text-xs font-semibold rounded-full shadow-xl border border-[#2B3B44] opacity-90 group-hover:opacity-100 transition-opacity">
-        <span className="w-2 h-2 rounded-full bg-[#25D366] mr-2 animate-ping" />
+    <div className="fixed bottom-6 right-6 z-40 flex items-center group">
+      {/* Tooltip / Badge Editorial */}
+      <div className="hidden md:flex items-center mr-3 px-3.5 py-1.5 bg-[#203B32] text-[#F8F7F3] text-xs font-medium rounded-[2px] shadow-lg border border-[#AD9166]/40 opacity-90 group-hover:opacity-100 transition-opacity">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166] mr-2 animate-ping" />
         Falar com o Arquiteto Roberto Moura
       </div>
 
-      {/* Botão Ícone WhatsApp */}
+      {/* Botão WhatsApp */}
       <a
         href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}
         target="_blank"
         rel="noopener noreferrer"
         onClick={handleFloatingClick}
         aria-label="Falar pelo WhatsApp com Roberto Moura"
-        className="w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-[#0D2214] flex items-center justify-center rounded-full shadow-2xl transition-all transform hover:scale-110 active:scale-95"
+        className="w-13 h-13 md:w-14 md:h-14 bg-[#203B32] hover:bg-[#344F43] border border-[#AD9166]/50 text-[#F8F7F3] flex items-center justify-center rounded-full shadow-2xl transition-all transform hover:scale-105 active:scale-95"
       >
         <svg
-          className="w-7 h-7 fill-current"
+          className="w-6 h-6 md:w-7 md:h-7 fill-[#AD9166]"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

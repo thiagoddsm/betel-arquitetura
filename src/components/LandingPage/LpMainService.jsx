@@ -18,53 +18,56 @@ export default function LpMainService() {
   const steps = [
     {
       step: "01",
-      title: "Imóvel Atual",
-      desc: "Levantamento da situação real da edificação e conferência das áreas existentes.",
+      title: "Imóvel atual",
+      desc: "Leitura da situação real da edificação e conferência das áreas existentes no local.",
     },
     {
       step: "02",
-      title: "Análise Documental",
-      desc: "Leitura de certidões, RGI, IPTU e identificação das pendências perante a lei local.",
+      title: "Análise documental",
+      desc: "Avaliação minuciosa de certidões, matrícula do RGI, IPTU e identificação das pendências legais.",
     },
     {
       step: "03",
-      title: "Caminho Técnico",
-      desc: "Definição do escopo: projetos, memoriais, laudos e acompanhamento no órgão público.",
+      title: "Caminho técnico",
+      desc: "Definição do escopo: projetos, memoriais, laudos e condução perante os órgãos envolvidos.",
     },
   ];
 
   return (
-    <section id="servicos" className="py-16 md:py-20 bg-white text-[#1E242B] border-b border-gray-200">
+    <section id="servicos" className="py-20 md:py-28 bg-white text-[#292D2A] border-b border-[#E8DFD0]">
       <div className="container mx-auto px-4 md:px-8">
         
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <span className="text-[#0F3B46] font-bold text-xs uppercase tracking-widest bg-[#E3EDF0] px-3 py-1 rounded">
+        <div className="max-w-3xl mb-16 text-left">
+          <span className="text-[11px] font-semibold tracking-widest uppercase text-[#AD9166] block mb-2">
             Oferta Principal
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mt-3 text-[#121A1F] font-serif">
+          <h2 className="font-serif text-3xl sm:text-4xl text-[#203B32] font-normal leading-tight">
             Legalização e regularização de imóveis
           </h2>
-          <p className="text-gray-600 mt-4 text-base leading-relaxed">
+          <p className="text-[#292D2A]/80 mt-4 text-base sm:text-lg leading-relaxed font-light">
             O trabalho começa pela leitura do imóvel e da documentação disponível. A partir dessa análise, Roberto identifica o escopo técnico que pode ser necessário, como levantamento, projeto, orientação documental e acompanhamento junto aos órgãos envolvidos. O caminho varia conforme o município, o histórico da construção e a legislação aplicável.
           </p>
         </div>
 
-        {/* Diagrama Simples: Imóvel atual → Análise → Caminho técnico */}
-        <div className="max-w-4xl mx-auto my-10">
-          <div className="grid md:grid-cols-3 gap-6 relative">
+        {/* Diagrama Editorial: Imóvel atual → Análise → Caminho técnico */}
+        <div className="max-w-5xl my-12">
+          <div className="grid md:grid-cols-3 gap-8 relative">
             {steps.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#F8F9FA] border border-gray-200 rounded-xl p-6 relative flex flex-col justify-between text-center"
+                className="bg-[#F8F7F3] border border-[#E8DFD0] rounded-[3px] p-8 relative flex flex-col justify-between hover:border-[#AD9166]/60 transition-all duration-300 shadow-[0_2px_15px_-3px_rgba(32,59,50,0.03)]"
               >
                 <div>
-                  <span className="w-10 h-10 rounded-full bg-[#0F3B46] text-white font-bold flex items-center justify-center mx-auto mb-4 text-sm font-serif">
-                    {item.step}
-                  </span>
-                  <h3 className="font-bold text-base text-[#121A1F] mb-2">
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-serif text-2xl text-[#AD9166] font-normal">
+                      {item.step}
+                    </span>
+                    <span className="h-[1px] w-12 bg-[#E8DFD0]" />
+                  </div>
+                  <h3 className="font-serif font-normal text-lg sm:text-xl text-[#203B32] mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#73766F] leading-relaxed font-light">
                     {item.desc}
                   </p>
                 </div>
@@ -74,16 +77,19 @@ export default function LpMainService() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-10">
+        <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-[#E8DFD0]/60">
+          <p className="text-xs text-[#73766F]">
+            Atendimento presencial e técnico em Niterói, São Gonçalo, Maricá e região.
+          </p>
           <a
             href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCtaClick}
-            className="inline-flex justify-center items-center gap-2 px-8 py-3.5 bg-[#0F3B46] hover:bg-[#164E5D] text-white font-bold text-sm uppercase tracking-wider rounded shadow transition-all"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all"
           >
             <span>Solicitar uma primeira análise</span>
-            <span>&rarr;</span>
+            <span className="text-[#AD9166]">&rarr;</span>
           </a>
         </div>
 
