@@ -1,18 +1,16 @@
 "use client";
 
-export default function LpSituations() {
-  const whatsappNumber = "5521997332031";
-  const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de explicar a situação do meu imóvel para avaliarmos os próximos passos."
-  );
+import { trackEvent } from "@/lib/tracking";
 
-  const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "situations",
-        page: "legalizacao",
-      });
-    }
+export default function LpSituations() {
+  const whatsappNumber = "5521997339287";
+
+  const handleCtaClick = (situationTitle) => {
+    trackEvent("whatsapp_click", {
+      position: "situations",
+      situation: situationTitle,
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   const situations = [
@@ -73,37 +71,43 @@ export default function LpSituations() {
 
         {/* Grade de 4 Cards: 4 em desktop, 2 em tablet, 1 em celular */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {situations.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-[#E8DFD0] rounded-[3px] p-7 flex flex-col justify-between hover:border-[#AD9166]/60 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(32,59,50,0.03)] hover:shadow-[0_8px_30px_-4px_rgba(32,59,50,0.08)] group"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-[2px] bg-[#F8F7F3] border border-[#E8DFD0] flex items-center justify-center mb-6 group-hover:bg-[#E8DFD0]/40 transition-colors">
-                  {item.svg}
-                </div>
-                <h3 className="font-serif font-normal text-lg text-[#203B32] mb-3 leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-[#73766F] leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
+          {situations.map((item, idx) => {
+            const situationMsg = encodeURIComponent(
+              `Olá, Roberto. Gostaria de falar sobre o meu caso de regularização: ${item.title}.`
+            );
 
-              <div className="mt-8 pt-4 border-t border-[#E8DFD0]/80">
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleCtaClick}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wider uppercase text-[#203B32] group-hover:text-[#AD9166] transition-colors"
-                >
-                  <span>Avaliar esta situação</span>
-                  <span>&rarr;</span>
-                </a>
+            return (
+              <div
+                key={idx}
+                className="bg-white border border-[#E8DFD0] rounded-[3px] p-7 flex flex-col justify-between hover:border-[#AD9166]/60 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(32,59,50,0.03)] hover:shadow-[0_8px_30px_-4px_rgba(32,59,50,0.08)] group"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-[2px] bg-[#F8F7F3] border border-[#E8DFD0] flex items-center justify-center mb-6 group-hover:bg-[#E8DFD0]/40 transition-colors">
+                    {item.svg}
+                  </div>
+                  <h3 className="font-serif font-normal text-lg text-[#203B32] mb-3 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#73766F] leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-4 border-t border-[#E8DFD0]/80">
+                  <a
+                    href={`https://wa.me/${whatsappNumber}?text=${situationMsg}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleCtaClick(item.title)}
+                    className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wider uppercase text-[#203B32] group-hover:text-[#AD9166] transition-colors"
+                  >
+                    <span>Falar sobre o meu caso</span>
+                    <span>&rarr;</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

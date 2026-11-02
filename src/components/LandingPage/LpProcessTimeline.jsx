@@ -1,18 +1,18 @@
 "use client";
 
+import { trackEvent } from "@/lib/tracking";
+
 export default function LpProcessTimeline() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const defaultMsg = encodeURIComponent(
     "Olá, Roberto. Gostaria de iniciar o atendimento para entender as etapas de regularização do meu imóvel."
   );
 
   const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "process",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "process",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   const steps = [
@@ -24,22 +24,22 @@ export default function LpProcessTimeline() {
     {
       num: "02",
       title: "Triagem inicial",
-      desc: "São identificadas as principais informações necessárias para compreender o caso.",
+      desc: "São identificadas as principais informações e documentos preliminares necessários.",
     },
     {
       num: "03",
       title: "Análise técnica",
-      desc: "São avaliadas as condições e os possíveis caminhos de regularização.",
+      desc: "São avaliadas as condições físicas, documentais e os possíveis caminhos de regularização.",
     },
     {
       num: "04",
       title: "Proposta de serviço",
-      desc: "O escopo e os honorários são apresentados conforme a complexidade do trabalho.",
+      desc: "O escopo e os honorários são apresentados de forma clara e transparente, conforme a complexidade.",
     },
     {
       num: "05",
       title: "Execução e acompanhamento",
-      desc: "Após a contratação, são desenvolvidas as atividades técnicas previstas no escopo contratado.",
+      desc: "Após a contratação, são desenvolvidas e acompanhadas as atividades técnicas previstas no escopo.",
     },
   ];
 
@@ -53,7 +53,7 @@ export default function LpProcessTimeline() {
             Metodologia & Transparência
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl text-[#203B32] font-normal leading-tight">
-            Clareza do primeiro contato à análise técnica.
+            Como funciona o atendimento
           </h2>
           <p className="text-[#292D2A]/80 mt-4 text-base sm:text-lg leading-relaxed">
             Um processo estruturado com etapas transparentes. Cada imóvel possui particularidades próprias e o escopo é dimensionado sob medida.
@@ -98,7 +98,7 @@ export default function LpProcessTimeline() {
             onClick={handleCtaClick}
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all shrink-0"
           >
-            <span>Iniciar meu atendimento</span>
+            <span>Solicitar análise inicial pelo WhatsApp</span>
             <span className="text-[#AD9166]">&rarr;</span>
           </a>
         </div>

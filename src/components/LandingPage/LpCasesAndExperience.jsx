@@ -1,18 +1,18 @@
 "use client";
 
+import { trackEvent } from "@/lib/tracking";
+
 export default function LpCasesAndExperience() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de entender como a análise técnica se aplica ao caso do meu imóvel."
+    "Olá, Roberto. Gostaria de consultar a viabilidade técnica para meu imóvel."
   );
 
   const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "technical_analysis_types",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "technical_analysis_types",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   const types = [
@@ -80,7 +80,7 @@ export default function LpCasesAndExperience() {
         {/* CTA */}
         <div className="mt-14 pt-8 border-t border-[#E8DFD0] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-xs text-[#73766F] max-w-xl">
-            * Cada município possui legislação urbanística e prazos próprios para tramitação de processos de legalização e mais-valia.
+            * Cada município possui legislação urbanística e prazos próprios para tramitação de processos de legalização e instrumentos de compensação urbanística, quando vigentes.
           </p>
           <a
             href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}

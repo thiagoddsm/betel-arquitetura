@@ -1,18 +1,18 @@
 "use client";
 
+import { trackEvent } from "@/lib/tracking";
+
 export default function LpMainService() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de entender o diagnóstico técnico necessário para o meu imóvel."
+    "Olá, Roberto. Gostaria de falar sobre o meu caso para entender a análise técnica necessária."
   );
 
   const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "technical_scope",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "technical_scope",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   const dimensions = [
@@ -29,7 +29,7 @@ export default function LpMainService() {
     {
       title: "Conformidade Documental",
       subtitle: "Registros e certidões",
-      desc: "Cruzamento entre a matrícula do RGI, histórico do IPTU, licenças municipais e certidões fiscais.",
+      desc: "Cruzamento entre a certidão de ônus reais do RGI, espelho/carnê do IPTU, licenças municipais e certidões fiscais.",
       icon: (
         <svg className="w-5 h-5 stroke-[#AD9166]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -39,7 +39,7 @@ export default function LpMainService() {
     {
       title: "Legislação & Parâmetros",
       subtitle: "Órgãos competentes",
-      desc: "Identificação das normas urbanísticas municipais aplicáveis (Plano Diretor, Código de Obras ou Mais-Valia).",
+      desc: "Identificação das normas urbanísticas municipais aplicáveis (Plano Diretor, Código de Obras ou leis temporárias de regularização).",
       icon: (
         <svg className="w-5 h-5 stroke-[#AD9166]" fill="none" viewBox="0 0 24 24" strokeWidth="1.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.5m-15 10.5V10.5" />
@@ -64,7 +64,7 @@ export default function LpMainService() {
           </p>
         </div>
 
-        {/* Três dimensões técnicas de análise — sem duplicar a jornada do cliente */}
+        {/* Três dimensões técnicas de análise */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl">
           {dimensions.map((item, idx) => (
             <div
@@ -96,7 +96,7 @@ export default function LpMainService() {
         {/* CTA */}
         <div className="mt-14 pt-8 border-t border-[#E8DFD0]/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-xs text-[#73766F] font-light">
-            Orientação técnica personalizada com Roberto Moura, arquiteto e urbanista.
+            Orientação técnica e condução personalizada com Roberto Moura, arquiteto e urbanista (CAU/BR A14965-9).
           </p>
           <a
             href={`https://wa.me/${whatsappNumber}?text=${defaultMsg}`}
@@ -105,7 +105,7 @@ export default function LpMainService() {
             onClick={handleCtaClick}
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all"
           >
-            <span>Solicitar diagnóstico do meu caso</span>
+            <span>Falar sobre o meu caso</span>
             <span className="text-[#AD9166]">&rarr;</span>
           </a>
         </div>

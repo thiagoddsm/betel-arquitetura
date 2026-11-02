@@ -8,7 +8,7 @@ export default function LpFaq() {
   const faqs = [
     {
       q: "O que significa regularizar um imóvel?",
-      a: "Regularizar significa buscar a conformidade entre a situação física real da edificação, os registros municipais (Prefeitura) e a matrícula do Cartório de Registro de Imóveis (RGI). Esse processo pode envolver a obtenção de certidões, habite-se e averbação das áreas construídas, contribuindo para a segurança documental e a preservação do valor venal do patrimônio.",
+      a: "Regularizar significa buscar a conformidade entre a situação física real da edificação, os registros municipais (Prefeitura) e a matrícula do Cartório de Registro de Imóveis (RGI). Esse processo pode envolver a obtenção de certidões, habite-se e averbação das áreas construídas, contribuindo para maior segurança documental e melhor compreensão da situação do imóvel.",
     },
     {
       q: "Quando uma obra ou ampliação precisa ser avaliada para regularização?",
@@ -32,7 +32,7 @@ export default function LpFaq() {
     },
     {
       q: "A aprovação do processo é garantida?",
-      a: "Não. A viabilidade e o deferimento dependem do atendimento às normas urbanísticas vigentes, das condições do imóvel e da análise soberana dos órgãos competentes. A atuação técnica de Roberto Moura organiza, instrui e acompanha o processo com rigor técnico para buscar a conformidade documental dentro dos parâmetros legais.",
+      a: "Não. A viabilidade e o deferimento dependem do atendimento às normas urbanísticas vigentes, das condições do imóvel e da análise dos órgãos competentes. A atuação técnica de Roberto Moura organiza, instrui e acompanha o processo com rigor técnico para buscar a conformidade documental dentro dos parâmetros legais.",
     },
     {
       q: "Roberto atende imóveis comerciais e pequenos negócios?",
@@ -40,7 +40,7 @@ export default function LpFaq() {
     },
     {
       q: "Quais cidades são atendidas prioritariamente?",
-      a: "A atuação principal concentra-se em Niterói, São Gonçalo, Maricá e região metropolitana. A viabilidade de atendimento para outros municípios pode ser consultada no contato inicial.",
+      a: "A atuação principal concentra-se em Niterói, São Gonçalo, Maricá e região metropolitana do Rio de Janeiro. A viabilidade de atendimento para outros municípios pode ser consultada no contato inicial.",
     },
     {
       q: "É necessário comparecer ao escritório para iniciar?",

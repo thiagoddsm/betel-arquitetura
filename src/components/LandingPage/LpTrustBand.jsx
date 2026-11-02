@@ -3,20 +3,20 @@
 export default function LpTrustBand() {
   const indicators = [
     {
-      num: "40+",
-      label: "Anos de experiência comprovada em arquitetura e regularização",
+      num: "+40",
+      label: "Anos de prática profissional em arquitetura e consultoria técnica",
     },
     {
       num: "CAU",
-      label: "Registro profissional ativo CAU/BR A14965-9",
+      label: "Registro profissional CAU/BR A14965-9",
     },
     {
       num: "RJ",
-      label: "Atendimento em Niterói, São Gonçalo, Maricá e região",
+      label: "Atuação em Niterói, São Gonçalo, Maricá e Rio de Janeiro",
     },
     {
       num: "Betel",
-      label: "Estrutura institucional e escritório multidisciplinar",
+      label: "Estrutura técnica e suporte institucional do escritório",
     },
   ];
 

@@ -1,20 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { trackEvent } from "@/lib/tracking";
 
 export default function LpHeader() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const whatsappMsg = encodeURIComponent(
-    "Olá, Arquiteto Roberto Moura. Vim pela página de Legalização da Betel Arquitetura e gostaria de orientação para o meu imóvel."
+    "Olá, Roberto. Vim pelo site e gostaria de solicitar uma análise inicial para meu imóvel."
   );
 
   const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "header",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "header",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   return (
@@ -37,7 +36,7 @@ export default function LpHeader() {
               Roberto Moura
             </p>
             <p className="text-[10px] text-[#73766F] leading-tight">
-              Arquiteto e Urbanista • CAU A14965-9
+              Arquiteto e Urbanista • CAU/BR A14965-9
             </p>
           </div>
         </div>

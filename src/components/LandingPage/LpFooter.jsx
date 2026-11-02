@@ -18,7 +18,7 @@ export default function LpFooter() {
               Roberto Moura • Arquiteto e Urbanista • CAU/BR A14965-9
             </p>
             <p className="text-xs text-[#E8DFD0]/60 font-light">
-              Orientação técnica e regularização em Niterói, São Gonçalo, Maricá e região.
+              Orientação técnica e regularização em Niterói, São Gonçalo, Maricá e RJ • WhatsApp: (21) 99733-9287
             </p>
           </div>
 
@@ -49,9 +49,9 @@ export default function LpFooter() {
               Site Institucional Betel
             </Link>
             <span>•</span>
-            <a href="#contato" className="hover:text-white transition-colors">
+            <Link href="/politica-de-privacidade" className="hover:text-white transition-colors underline">
               Política de Privacidade
-            </a>
+            </Link>
           </div>
         </div>
       </div>

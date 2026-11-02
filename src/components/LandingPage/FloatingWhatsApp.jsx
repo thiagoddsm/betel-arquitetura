@@ -1,18 +1,18 @@
 "use client";
 
+import { trackEvent } from "@/lib/tracking";
+
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de orientação técnica para a regularização do meu imóvel."
+    "Olá, Roberto. Vim pelo site e gostaria de solicitar uma análise inicial para meu imóvel."
   );
 
   const handleFloatingClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "floating",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "floating",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   return (

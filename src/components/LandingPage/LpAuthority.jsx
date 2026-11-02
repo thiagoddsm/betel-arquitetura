@@ -1,18 +1,19 @@
 "use client";
 
+import Image from "next/image";
+import { trackEvent } from "@/lib/tracking";
+
 export default function LpAuthority() {
-  const whatsappNumber = "5521997332031";
+  const whatsappNumber = "5521997339287";
   const defaultMsg = encodeURIComponent(
-    "Olá, Roberto. Gostaria de falar diretamente sobre a situação e regularização do meu imóvel."
+    "Olá, Roberto. Gostaria de falar com você sobre o meu caso de regularização de imóvel."
   );
 
   const handleCtaClick = () => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click_whatsapp", {
-        position: "about",
-        page: "legalizacao",
-      });
-    }
+    trackEvent("whatsapp_click", {
+      position: "about",
+      page: "legalizacao-de-imoveis",
+    });
   };
 
   return (
@@ -21,12 +22,21 @@ export default function LpAuthority() {
         
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           
-          {/* Card Editorial do Arquiteto */}
+          {/* Card Editorial do Arquiteto com Foto Autêntica */}
           <div className="lg:col-span-5">
-            <div className="relative bg-[#1A312A] border border-[#344F43] rounded-[3px] p-8 md:p-10 text-center shadow-xl">
-              <div className="w-24 h-24 rounded-full bg-[#203B32] border-2 border-[#AD9166] flex items-center justify-center text-[#AD9166] font-serif font-normal text-3xl mx-auto mb-6">
-                RM
+            <div className="relative bg-[#1A312A] border border-[#344F43] rounded-[3px] p-6 sm:p-8 text-center shadow-xl">
+              
+              {/* Moldura com Foto Real */}
+              <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full overflow-hidden border-2 border-[#AD9166] shadow-md mb-6 bg-[#203B32]">
+                <Image
+                  src="/roberto-moura.png"
+                  alt="Roberto Moura - Arquiteto e Urbanista"
+                  fill
+                  className="object-cover object-top"
+                  sizes="180px"
+                />
               </div>
+
               <h3 className="font-serif text-2xl font-normal text-white">
                 Roberto Moura
               </h3>
@@ -37,18 +47,18 @@ export default function LpAuthority() {
                 CAU/BR A14965-9
               </div>
               
-              <div className="mt-8 pt-6 border-t border-[#344F43] text-xs text-[#E8DFD0]/80 space-y-2 text-left">
+              <div className="mt-8 pt-6 border-t border-[#344F43] text-xs text-[#E8DFD0]/80 space-y-2.5 text-left">
                 <p className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
                   <span>Sócio-fundador da Betel Arquitetura</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
-                  <span>Mais de 40 anos de atuação profissional</span>
+                  <span>Mais de 40 anos de prática profissional</span>
                 </p>
                 <p className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#AD9166]"></span>
-                  <span>Atendimento em Niterói, SG, Maricá e região</span>
+                  <span>Atendimento em Niterói, São Gonçalo, Maricá e RJ</span>
                 </p>
               </div>
             </div>
@@ -61,18 +71,18 @@ export default function LpAuthority() {
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl text-white font-normal leading-tight">
               Experiência técnica. <br />
-              <span className="italic text-[#E8DFD0]">Atendimento próximo.</span>
+              <span className="italic text-[#E8DFD0]">Atendimento próximo e responsável.</span>
             </h2>
 
             <div className="space-y-4 text-sm sm:text-base text-[#E8DFD0]/90 leading-relaxed font-light">
               <p>
-                Roberto Moura é arquiteto e urbanista e atua na orientação técnica de processos de regularização imobiliária. Seu trabalho busca esclarecer as particularidades de cada imóvel e orientar o cliente sobre os procedimentos necessários para encaminhar seu caso.
+                Roberto Moura é arquiteto e urbanista (CAU/BR A14965-9) e atua na orientação técnica de processos de regularização imobiliária. Seu trabalho busca esclarecer as particularidades de cada imóvel e orientar o cliente sobre os procedimentos necessários para encaminhar seu caso com clareza.
               </p>
               <p>
-                Com <strong className="font-semibold text-white">mais de 40 anos de atuação profissional</strong> em projetos, consultoria técnica e demandas de legalização, seu foco está voltado ao atendimento direto a proprietários, famílias e pequenos negócios que necessitam de segurança jurídica e responsabilidade técnica.
+                Com <strong className="font-semibold text-white">mais de 40 anos de prática profissional</strong> em projetos, consultoria técnica e demandas de legalização, seu foco está voltado ao atendimento direto a proprietários, famílias e empresas que buscam segurança documental, responsabilidade técnica e previsibilidade nos trâmites.
               </p>
               <p>
-                Como sócio-fundador da <strong className="font-semibold text-white">Betel Arquitetura</strong>, Roberto alia seu conhecimento prático das exigências municipais e cartoriais a uma estrutura institucional sólida de projetos e consultoria.
+                Como sócio-fundador da <strong className="font-semibold text-white">Betel Arquitetura</strong>, Roberto alia seu profundo conhecimento prático das exigências municipais e cartoriais de Niterói, São Gonçalo, Maricá e Rio de Janeiro à estrutura de apoio técnico do escritório.
               </p>
             </div>
 
@@ -84,7 +94,7 @@ export default function LpAuthority() {
                 onClick={handleCtaClick}
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs uppercase tracking-widest rounded-[2px] transition-all shadow-sm"
               >
-                <span>Falar com o arquiteto</span>
+                <span>Falar com Roberto Moura</span>
                 <span>&rarr;</span>
               </a>
             </div>
