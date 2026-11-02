@@ -47,7 +47,7 @@ export default function LpHero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleHeroCta}
-                className="inline-flex justify-center items-center gap-2.5 px-8 py-4 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs md:text-sm uppercase tracking-widest rounded-[2px] shadow-sm hover:shadow transition-all"
+                className="inline-flex justify-center items-center gap-2.5 px-8 py-4 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs sm:text-sm tracking-wider rounded-[3px] shadow-sm hover:shadow transition-all"
               >
                 <span>Solicitar análise inicial pelo WhatsApp</span>
                 <span className="text-[#AD9166]">&rarr;</span>
@@ -55,7 +55,7 @@ export default function LpHero() {
 
               <a
                 href="#como-funciona"
-                className="inline-flex justify-center items-center px-6 py-4 text-[#203B32] hover:text-[#344F43] font-medium text-xs md:text-sm uppercase tracking-widest border border-[#E8DFD0] hover:border-[#AD9166]/50 bg-white/60 transition-all rounded-[2px]"
+                className="inline-flex justify-center items-center px-6 py-4 text-[#203B32] hover:text-[#344F43] font-medium text-xs sm:text-sm tracking-wider border border-[#E8DFD0] hover:border-[#AD9166]/50 bg-white/60 transition-all rounded-[3px]"
               >
                 Entender como funciona
               </a>

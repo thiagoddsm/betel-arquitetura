@@ -34,7 +34,7 @@ export default function LpCasesAndExperience() {
   ];
 
   return (
-    <section id="experiencias" className="py-20 md:py-28 bg-[#F8F7F3] text-[#292D2A] border-b border-[#E8DFD0]">
+    <section id="experiencias" className="py-20 md:py-28 bg-white text-[#292D2A] border-b border-[#E8DFD0]">
       <div className="container mx-auto px-4 md:px-8">
         
         {/* Cabeçalho */}
@@ -50,15 +50,15 @@ export default function LpCasesAndExperience() {
           </p>
         </div>
 
-        {/* Grade Editorial com 3 tipos de análise */}
+        {/* Grade Editorial com 3 tipos de análise em cards off-white */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl">
           {types.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white border border-[#E8DFD0] rounded-[3px] p-8 flex flex-col justify-between hover:border-[#AD9166]/60 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(32,59,50,0.03)]"
+              className="bg-[#F8F7F3] border border-[#E8DFD0] rounded-[3px] p-8 flex flex-col justify-between hover:border-[#AD9166]/60 transition-all duration-300 shadow-[0_4px_20px_-4px_rgba(32,59,50,0.03)]"
             >
               <div>
-                <span className="text-[10px] uppercase tracking-widest font-semibold text-[#AD9166] bg-[#E8DFD0]/40 px-2.5 py-1 rounded-[2px] inline-block mb-5">
+                <span className="text-[10px] uppercase tracking-widest font-semibold text-[#AD9166] bg-white border border-[#E8DFD0] px-2.5 py-1 rounded-[2px] inline-block mb-5">
                   {item.badge}
                 </span>
                 <h3 className="font-serif font-normal text-xl text-[#203B32] mb-3 leading-snug">
@@ -87,7 +87,7 @@ export default function LpCasesAndExperience() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCtaClick}
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs tracking-wider rounded-[2px] transition-all"
           >
             <span>Consultar viabilidade do meu caso</span>
             <span className="text-[#AD9166]">&rarr;</span>

@@ -126,7 +126,7 @@ export default function LpContactForm() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleWhatsAppDirect}
-                className="w-full inline-flex justify-center items-center gap-3 px-6 py-4 bg-[#344F43] hover:bg-[#3D5C4F] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] border border-[#AD9166]/30 transition-all shadow-sm"
+                className="w-full inline-flex justify-center items-center gap-3 px-6 py-4 bg-[#344F43] hover:bg-[#3D5C4F] text-[#F8F7F3] font-medium text-xs sm:text-sm tracking-wider rounded-[3px] border border-[#AD9166]/30 transition-all shadow-sm"
               >
                 <svg className="w-4 h-4 fill-[#AD9166] shrink-0" viewBox="0 0 24 24">
                   <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.074-2.008-.471-1.682-.699-2.756-2.433-2.841-2.546-.084-.112-.676-.901-.676-1.718 0-.818.428-1.22.58-1.383.153-.163.334-.204.446-.204.112 0 .224.001.322.006.103.005.242-.039.378.289.144.35.492 1.203.535 1.291.043.088.072.192.014.307-.058.115-.088.187-.174.288-.088.102-.185.228-.264.306-.089.088-.182.184-.078.362.104.178.464.766.996 1.24 1.157 1.031 2.133 1.35 2.435 1.5.302.15.48.127.659-.08.179-.207.766-.893.97-1.198.204-.305.408-.255.688-.152.28.102 1.776.837 2.081.989.306.152.51.228.585.355.076.128.076.741-.068 1.146z" />
@@ -143,7 +143,7 @@ export default function LpContactForm() {
 
           {/* Formulário Editorial e Seguro */}
           <div className="lg:col-span-7 bg-[#1A312A] border border-[#344F43] p-7 sm:p-10 rounded-[3px] shadow-2xl">
-            <h3 className="font-serif text-xl font-normal text-white mb-2">
+            <h3 className="font-serif text-xl sm:text-2xl font-normal text-white mb-2">
               Formulário de Análise Prévia
             </h3>
             <p className="text-xs text-[#E8DFD0]/80 mb-6 font-light">
@@ -269,7 +269,7 @@ export default function LpContactForm() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-4 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs uppercase tracking-widest rounded-[2px] transition-all disabled:opacity-50 shadow-sm"
+                className="w-full py-4 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs sm:text-sm tracking-wider rounded-[3px] transition-all disabled:opacity-50 shadow-sm cursor-pointer"
               >
                 {isLoading ? "Processando envio..." : "Enviar informações para análise inicial →"}
               </button>

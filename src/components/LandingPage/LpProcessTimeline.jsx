@@ -44,7 +44,7 @@ export default function LpProcessTimeline() {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-white text-[#292D2A] border-b border-[#E8DFD0]">
+    <section id="como-funciona" className="py-20 md:py-28 bg-[#F8F7F3] text-[#292D2A] border-b border-[#E8DFD0]">
       <div className="container mx-auto px-4 md:px-8">
         
         {/* Cabeçalho */}
@@ -60,12 +60,12 @@ export default function LpProcessTimeline() {
           </p>
         </div>
 
-        {/* Linha do tempo editorial com numerais destacados */}
+        {/* Linha do tempo editorial com numerais destacados em cards brancos */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
           {steps.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#F8F7F3] border border-[#E8DFD0] rounded-[3px] p-6 flex flex-col justify-between hover:border-[#AD9166]/50 transition-all duration-300 shadow-[0_2px_15px_-3px_rgba(32,59,50,0.03)]"
+              className="bg-white border border-[#E8DFD0] rounded-[3px] p-6 flex flex-col justify-between hover:border-[#AD9166]/50 transition-all duration-300 shadow-[0_2px_15px_-3px_rgba(32,59,50,0.03)]"
             >
               <div>
                 <span className="font-serif text-3xl sm:text-4xl font-normal text-[#AD9166] block mb-4">
@@ -96,7 +96,7 @@ export default function LpProcessTimeline() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCtaClick}
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all shrink-0"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs tracking-wider rounded-[2px] transition-all shrink-0"
           >
             <span>Solicitar análise inicial pelo WhatsApp</span>
             <span className="text-[#AD9166]">&rarr;</span>

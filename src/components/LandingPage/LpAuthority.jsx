@@ -30,7 +30,7 @@ export default function LpAuthority() {
               <div className="relative w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-full overflow-hidden border-2 border-[#AD9166] shadow-md mb-6 bg-[#203B32]">
                 <Image
                   src="/roberto-moura.png"
-                  alt="Roberto Moura - Arquiteto e Urbanista"
+                  alt="Roberto Moura - Arquiteto e Urbanista CAU/BR A14965-9"
                   fill
                   className="object-cover object-top"
                   sizes="180px"
@@ -92,7 +92,7 @@ export default function LpAuthority() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleCtaClick}
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs uppercase tracking-widest rounded-[2px] transition-all shadow-sm"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#AD9166] hover:bg-[#c2a373] text-[#203B32] font-semibold text-xs sm:text-sm tracking-wider rounded-[3px] transition-all shadow-sm"
               >
                 <span>Falar com Roberto Moura</span>
                 <span>&rarr;</span>

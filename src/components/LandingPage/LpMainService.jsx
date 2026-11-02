@@ -103,7 +103,7 @@ export default function LpMainService() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleCtaClick}
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs uppercase tracking-widest rounded-[2px] transition-all"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#203B32] hover:bg-[#344F43] text-[#F8F7F3] font-medium text-xs sm:text-sm tracking-wider rounded-[3px] transition-all"
           >
             <span>Falar sobre o meu caso</span>
             <span className="text-[#AD9166]">&rarr;</span>
